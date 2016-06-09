@@ -69,7 +69,7 @@
       (progn
         (if (and buffer-file-name (equal "go" (file-name-extension buffer-file-name)))
             (setq-local compilation-read-command nil))
-        (setq-local go-oracle-scope "k8s.io/kubernetes")))
+        (setq-local go-guru-scope "k8s.io/kubernetes")))
      )))
 
 (defun olegshaldybin-projectile-switch-project-hook ()
