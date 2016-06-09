@@ -94,6 +94,12 @@
 ;; vagrant
 (prelude-require-packages '(vagrant vagrant-tramp))
 
+;; saveplace/recentf
+;; ignore tramp files and anything in .git
+(setq save-place-ignore-files-regexp "\\(?:^/[a-z]+:\\|/.git/\\)")
+(dolist (e '("vendor/" "/_workspace/" "/var" "/usr/local/" "/sudo:" "/ssh:" "/vagrant:"))
+  (add-to-list 'recentf-exclude e))
+
 ;; .dir-locals.el
 (setq enable-local-eval t
       enable-local-variables :all)
