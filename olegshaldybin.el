@@ -47,15 +47,6 @@
 (setq projectile-sort-order 'recentf)
 (setq projectile-switch-project-action 'projectile-vc)
 
-(let ((map prelude-mode-map))
-  (define-key map (kbd "s-g") 'projectile-grep)
-  (define-key map (kbd "s-f") 'projectile-find-file)
-  (define-key map (kbd "s-s") 'projectile-ag)
-  (define-key map (kbd "C-c W") 'browse-url-at-point)
-  (define-key map (kbd "C-c w") (lambda ()
-                                  (interactive)
-                                  (eww (browse-url-url-at-point)))))
-
 ;; dir-locals based project config without the .dir-locals.el file
 (dir-locals-set-class-variables
  'project-locals
